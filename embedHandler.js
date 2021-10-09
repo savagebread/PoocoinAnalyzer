@@ -36,11 +36,6 @@ const embedHandler = {
                 { name: 'TokenSniffer', value: 'https://tokensniffer.com/' },
                 { name: 'TokenSniffer Scam List', value: 'https://tokensniffer.com/scams' },
                 { name: 'BitQuery', value: 'https://explorer.bitquery.io/bsc/' }
-                //{ name: '', value:''}
-                //{ name: '', value:''}
-                //{ name: '', value:''}
-                //{ name: '', value:''}
-                //{ name: '', value:''} 
             )
         return embed
     },
@@ -51,11 +46,8 @@ const embedHandler = {
             .setColor('#9F0707')
             .setTitle('Wallet Info')
             .addFields(
-                //{ name: 'Poocoin Link:', value: (poolink+txid)},
                 { name: 'BSC Scan', value: (walletlink + txid) },
-                { name: 'Bitquery', value: (bitquerylink + 'address/' + txid) },
-                //{ name: 'PooCoin', value:'https://poocoin.app/'},
-                //{ name: 'SniperWatcher', value:'https://poocoin.app/sniper-watcher'}
+                { name: 'Bitquery', value: (bitquerylink + 'address/' + txid) }
             )
         return embed
     },
@@ -66,20 +58,12 @@ const embedHandler = {
             .setColor('#9F0707')
             .setTitle('Transaction Info')
             .addFields(
-                //{ name: 'Poocoin Link:', value: poolink+txid},
                 { name: 'Transaction ID', value: txlink + txid },
-                { name: 'Bitquery', value: (bitquerylink + 'tx/' + txid) },
-                //{ name: 'PancakeSwap', value:'https://exchange.pancakeswap.com/#/swap'},
-                //{ name: 'PooCoin', value:'https://poocoin.app/'},
-                //{ name: 'SniperWatcher', value:'https://poocoin.app/sniper-watcher'}
+                { name: 'Bitquery', value: (bitquerylink + 'tx/' + txid) }
             )
         return embed
     },
     getContractEmbed(txid) {
-        //let jsonContract = fs.readFileSync('./contractHistory.json', 'utf8')
-        //let parsedJson = JSON.parse(jsonContract)
-        //let contractIndex = parsedJson.indexOf(txid)
-        //console.log(contractIndex)
         let embed = new Discord.MessageEmbed()
             .setAuthor('PooCoinBot!', 'https://assets.coingecko.com/coins/images/14855/small/w4_9ayk3_400x400.png?1618802191')
             .setFooter('Author - Bread')
@@ -92,7 +76,6 @@ const embedHandler = {
                 { name: 'BSC Contract', value: (walletlink + txid) },
                 { name: 'BSC Token', value: (tokenlink + txid) },
                 { name: 'Bitquery', value: (bitquerylink + 'token/' + txid) },
-                //{ name: 'SniperWatcher', value:'https://poocoin.app/sniper-watcher'}
             )
         return embed
     },
