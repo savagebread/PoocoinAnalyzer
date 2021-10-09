@@ -21,15 +21,6 @@ var coinBody = [
     }
 ];
 
-async function filterArrays(coinData){
-    let compFile = fs.readFileSync('./contractHistory.json', 'utf-8')
-    console.log(coinData)
-    let filteredCSV = new ObjectsToCsv(coinData)
-    //await filteredCSV.toDisk('./contracts.csv')
-    //await filteredCSV.toDisk('./contractHistory.csv', {append: true},{allColumns: true})
-    console.log(filteredCSV)
-}
-
 const requestHandler = {
   
     getContractUpdate(){
