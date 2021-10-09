@@ -1,7 +1,6 @@
 {
-    "prefix":"?",
+    "prefix":"",
     "disctoken":"",
-    "bsctoken":"",
     "poolink":"https://poocoin.app/tokens/",
     "txlink":"https://bscscan.com/tx/",
     "walletlink":"https://bscscan.com/address/",
